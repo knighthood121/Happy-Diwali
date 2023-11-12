@@ -1,0 +1,168 @@
+body{
+    background: url('../images/bg.jpg');
+    margin: 0;
+    padding: 0;
+    font-family: 'Irish Grover', cursive;
+}
+
+.circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 350px;
+    width: 350px;
+    border: 2px solid gray;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(226, 147, 43);
+    opacity: 0.8;
+}
+
+.circle::before{
+    content: ' ';
+    height: 100%;
+    width: 100%;
+    border: 4px dotted white;
+    border-radius: 50%;
+    position: absolute;
+    box-sizing: border-box;
+    transform: scale(1.0);
+    animation: rotate 30s linear infinite;
+}
+
+.lamp{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 100px;
+    border: 3px solid rgb(114, 80, 80);
+    background-color: brown;
+    border-bottom-left-radius: 120px;
+    border-bottom-right-radius: 120px;
+}
+
+.lamp::before{
+    content: '';
+    position: absolute;
+    top: -80px;
+    left: 75px;
+    width: 25px;
+    height: 70px;
+    background-color: yellow;
+    border-top-right-radius: 70px;
+    border-bottom-left-radius: 70px;
+    transform-origin: bottom right;
+    filter: blur(2px);
+    animation: animate 5s linear infinite;
+}
+
+h1{
+    padding: 0px;
+    margin: 40px;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    line-height: 60px;
+    text-shadow: 0px 15px 5px rgba(0, 0, 0, .2);
+    animation: sec 2s infinite;
+}
+
+h1 span{
+    font-size: 70px;
+    animation: sec 2s infinite;
+}
+
+@keyframes rotate{
+    0%{
+      transform: scale(1.1) rotate(0deg);
+    }
+    100%{
+      transform: scale(1.1) rotate(360deg);
+    }
+  }
+
+  @keyframes animate{
+      0%{
+          transform: rotate(20deg);
+          box-shadow: 0 0 30px rgb(255, 255, 0);
+      }
+      25%{
+          transform: rotate(10deg);
+      }
+      50%{
+          transform: rotate(5deg);
+      }
+      75%{
+          transform: rotate(15deg);
+          box-shadow: 0 0 30px rgb(255, 255, 0);
+      }
+      100%{
+          transform: rotate(20deg);
+      }
+  }
+
+  @keyframes sec{
+      0%{
+          color: orange;
+      }
+      10%{
+          color: red;
+      }
+      20%{
+          color: rgb(212, 66, 66);
+          letter-spacing: 2px;
+      }
+      30%{
+          color: lime;
+      }
+      40%{
+          color: green;
+      }
+      50%{
+          color: blue;
+          letter-spacing: 5px;
+      }
+      60%{
+          color: magenta;
+      }
+      70%{
+          color: maroon;
+      }
+      80%{
+          color: rgb(0, 140, 255);
+          letter-spacing: 2px;
+      }
+      90%{
+          color: bisque;
+      }
+      100%{
+          color: yellow;
+          letter-spacing: 0px;
+      }
+  }
+
+
+  footer{
+      color: bisque;
+      top: 84%;
+      position: absolute;
+      margin: 0 25%;
+      width: 50%;
+      background-color: orangered;
+      border-radius: 15px;
+      opacity: 0.8;
+      font-family: 'Dancing Script', cursive;
+  }
+
+  footer .content{
+      margin: 0px 25px;
+      text-align: center;
+      font-size: 18px;
+  }
+
+  footer .H{
+      text-align: right;
+      margin-right: 5px;
+  }
